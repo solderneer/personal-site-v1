@@ -1,0 +1,32 @@
+html
+{
+
+}
+
+body
+{
+
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    height: 100vh;
+    border-radius: 0px;
+   /* background-image: url(../assets/wall.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    background: white;
+    color: #212121;
+    font-family: 'Kalam', cursive;
+}
+
+.name {
+    font-size: 100px;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+.sub-name{
+    font-family:'Roboto Mono', monospace;
+}
