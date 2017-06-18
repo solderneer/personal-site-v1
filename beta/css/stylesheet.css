@@ -30,3 +30,23 @@ body
 .sub-name{
     font-family:'Roboto Mono', monospace;
 }
+
+.social-nav{
+
+}
+
+.fa{
+    font-size: 25px;
+}
+
+.fa-facebook-square:hover{
+    color: #3B5998;
+}
+
+.fa-github-square:hover{
+    color: #6e5494;
+}
+
+.fa-twitter-square:hover{
+    color: #0084b4;
+}
