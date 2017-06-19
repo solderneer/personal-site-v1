@@ -18,9 +18,12 @@ body
     background-repeat: no-repeat;*/
     background: white;
     color: #212121;
-    font-family: 'Kalam', cursive;
 }
 
+.intro{
+    font-family: 'Rochester', cursive;
+    font-size: 50px;
+}
 .name {
     font-size: 100px;
     font-family: 'Roboto';
@@ -28,14 +31,16 @@ body
 }
 
 .sub-name{
-    font-family:'Roboto Mono', monospace;
+    font-family:'Roboto';
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .typething{
     padding: 0px;
     margin: 0px;
-    background: red;
-    height: 30vh;
+    background: #2196F3;
+    height: 40vh;
     font-family: 'Roboto';
     font-weight: 600;
     color: rgba(255, 255, 255, 1.0);
@@ -43,11 +48,16 @@ body
     text-align: center;
 }
 
+.element0{
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
 .wrap{
     display: inline-block;
     margin: 10px 10px 0 0;
     padding: 5px 10px;
-    margin-top: 10vh;
+    margin-top: 15vh;
 }
 
 .typed-cursor{
@@ -70,4 +80,21 @@ body
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.about-header{
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 80px;
+    margin: 30px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.about-content{
+    margin: 40px;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-size: 20px;
 }
