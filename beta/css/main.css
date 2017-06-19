@@ -30,3 +30,22 @@ body
 .sub-name{
     font-family:'Roboto Mono', monospace;
 }
+
+.typething{
+    padding: 0px;
+    margin: 0px;
+    background: red;
+    height: 40vh;
+    font-family: 'Roboto';
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 80px;
+    text-align: center;
+}
+
+.wrap{
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 5px 10px;
+    margin-top: 10vh;
+}
