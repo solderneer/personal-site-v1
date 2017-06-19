@@ -2,9 +2,8 @@
     font-size: 25px;
 }
 
-.social-nav .fa:visited{
-    font-size: 25px;
-    text-decoration: none;
+.social-nav .a{
+	color: black;
 }
 
 .fa-facebook{
