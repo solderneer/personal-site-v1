@@ -12,20 +12,22 @@ body
     margin-bottom: 0px;
     height: 97vh;
     border-radius: 0px;
-   /* background-image: url(../assets/wall.jpg);
-    background-position: 0% 25%;
-    background-size: cover;
-    background-repeat: no-repeat;*/
-    background: white;
+    background-image: url(../assets/temp.png);
+    background-position: right;
+    background-size: 568px 750px;
+    background-repeat: no-repeat;
     color: #212121;
+    background-color: white;
+    padding-right: 30px;
 }
 
 .intro{
+    margin-top: 17vh;
     font-family: 'Rochester', cursive;
-    font-size: 50px;
+    font-size: 70px;
 }
 .name {
-    font-size: 100px;
+    font-size: 120px;
     font-family: 'Roboto';
     font-weight: 700;
 }
