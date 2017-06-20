@@ -13,8 +13,10 @@ function isScrolledIntoView(elem)
 document.addEventListener("DOMContentLoaded", function(){
 
 	var typyViewcnt = 0;
+	var qualsViewcnt = 0;
 	document.addEventListener('scroll', function(e) {
 		typy = document.getElementById('typy');
+		quals = document.getElementsByClassName('quals')[0];
 
 		if(isScrolledIntoView(typy) && (typyViewcnt == 0))
 		{
@@ -39,6 +41,20 @@ document.addEventListener("DOMContentLoaded", function(){
 			});
 
 			typyViewcnt++;
+		}
+
+		if(isScrolledIntoView(quals) && (qualsViewcnt == 0))
+		{
+			var numAnim1 = new CountUp(document.getElementById('no1'), 0, 24);
+			numAnim1.start();
+
+			var numAnim2 = new CountUp(document.getElementById('no2'), 0, 133);
+			numAnim2.start();
+
+			var numAnim3 = new CountUp(document.getElementById('no3'), 0, 19);
+			numAnim3.start();
+
+			qualsViewcnt++
 		}
 
 	});

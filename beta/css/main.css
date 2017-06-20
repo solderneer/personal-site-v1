@@ -108,3 +108,32 @@ body
     margin-bottom: 30px;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
+
+.quals{
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#no1{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 70px;
+    color: #B71C1C;
+}
+
+#no2{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 70px;
+    color: #1B5E20;
+}
+
+#no3{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 70px;
+    color: #FF6D00;
+}
