@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"stroke",
+				"strokeWidth"
+			],
+			[
+				"content",
+				"content"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"f",
+				"FF6D00"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"container",
+				"container-fluid"
+			],
+			[
 				"white",
 				"w3cRGBa:white\tW3C white (RGBa)"
 			],
@@ -19,7 +47,16 @@
 			"file": "beta/index.html",
 			"settings":
 			{
-				"buffer_size": 3807,
+				"buffer_size": 5456,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "beta/js/main.js",
+			"settings":
+			{
+				"buffer_size": 4366,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -28,8 +65,16 @@
 			"file": "beta/css/main.css",
 			"settings":
 			{
-				"buffer_size": 1782,
+				"buffer_size": 2505,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "beta/css/social-nav.css",
+			"settings":
+			{
+				"buffer_size": 335,
 				"line_ending": "Unix"
 			}
 		}
@@ -85,7 +130,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 203.0,
 		"last_filter": "pACK",
 		"selected_items":
 		[
@@ -149,6 +194,7 @@
 		"height": 141.0,
 		"history":
 		[
+			"quit",
 			"ls"
 		]
 	},
@@ -163,10 +209,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta"
+		"/Users/solderneer/Documents/Projects/solderneer.github.io",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/assets",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js"
 	],
 	"file_history":
 	[
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/progress.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/style.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/social-nav.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/css/bootstrap.css",
@@ -243,7 +294,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -252,46 +303,76 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3807,
+						"buffer_size": 5456,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								229,
-								229
+								4209,
+								4209
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 485.0,
+						"translation.y": 1236.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "beta/css/main.css",
+					"file": "beta/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1782,
+						"buffer_size": 4366,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4,
-								4
+								4124,
+								4124
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 415.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "beta/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								643,
+								643
 							]
 						],
 						"settings":
@@ -302,10 +383,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 272.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "beta/css/social-nav.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		if(isScrolledIntoView(progress) && (progressViewsnt == 0))
 		{
-			bar1.animate(0.5);
+			bar1.animate(0.6);
 			bar2.animate(0.7);
 			bar3.animate(0.85);
 			bar4.animate(0.85);
