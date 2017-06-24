@@ -108,6 +108,12 @@ body
     margin-left: 100px;
 }
 
+section-subsubheader{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 30px;
+}
+
 .section-subsubright{
     font-family: 'Roboto';
     font-weight: 100;
@@ -175,4 +181,27 @@ body
 .card{
     margin: 20px;
     margin-left: 100px;
+}
+
+.card-text{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.imgnext {
+    width: 130px;
+    display: inline;
+    float: right;
+}
+
+.colorish{
+    color: #B71C1C;
+    font-weight: 400;
+}
+.colorish1{
+    color: #B71C1C;
+    font-weight: 700;
+    font-size: 20px;
+
 }
