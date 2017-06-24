@@ -183,6 +183,23 @@ section-subsubheader{
     margin-left: 100px;
 }
 
+.card:hover{
+    background-color: #B71C1C;
+    color: white;
+}
+
+.card:hover .imgnext{
+    visibility: hidden;
+}
+
+.card:hover .colorish{
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.card:hover .colorish1{
+    color: rgba(255, 255, 255, 1.0);
+}
+
 .card-text{
     font-family: 'Roboto';
     font-weight: 300;
