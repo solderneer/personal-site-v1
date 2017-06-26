@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"background",
+				"background-color"
+			],
+			[
+				"s",
+				"src\tAttr"
+			],
+			[
+				"section",
+				"section-subheader"
+			],
+			[
 				"stroke",
 				"strokeWidth"
 			],
@@ -47,7 +59,7 @@
 			"file": "beta/index.html",
 			"settings":
 			{
-				"buffer_size": 5456,
+				"buffer_size": 8924,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -65,16 +77,8 @@
 			"file": "beta/css/main.css",
 			"settings":
 			{
-				"buffer_size": 2505,
+				"buffer_size": 3410,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "beta/css/social-nav.css",
-			"settings":
-			{
-				"buffer_size": 335,
 				"line_ending": "Unix"
 			}
 		}
@@ -210,15 +214,13 @@
 	"expanded_folders":
 	[
 		"/Users/solderneer/Documents/Projects/solderneer.github.io",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/assets",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js"
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta"
 	],
 	"file_history":
 	[
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/progress.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/style.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/timeline.css",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/progress.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/social-nav.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/css/bootstrap.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/main.css",
@@ -273,6 +275,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"font",
 			"color",
 			"MODE",
 			"vTaskDelay"
@@ -303,15 +306,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5456,
+						"buffer_size": 8924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4209,
-								4209
+								7387,
+								7387
 							]
 						],
 						"settings":
@@ -322,7 +325,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1236.0,
+						"translation.y": 2830.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -341,8 +344,8 @@
 						"selection":
 						[
 							[
-								4124,
-								4124
+								1218,
+								1218
 							]
 						],
 						"settings":
@@ -351,11 +354,11 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 415.0,
+						"translation.x": 16.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -364,15 +367,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2505,
+						"buffer_size": 3410,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								643,
-								643
+								3080,
+								3080
 							]
 						],
 						"settings":
@@ -383,39 +386,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 272.0,
+						"translation.y": 2967.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "beta/css/social-nav.css",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 335,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -484,7 +458,7 @@
 		[
 			[
 				"",
-				"~/Documents/Projects/KerbalKontrol/code/io-board/SublimeAVR.sublime-project"
+				"~/Documents/Projects/test/stm32-test.sublime-project"
 			]
 		],
 		"width": 380.0
