@@ -18,16 +18,16 @@ body
     background-repeat: no-repeat;*/
     color: #212121;
     background-color: white;
-    padding-right: 30px;
+    padding-right: 5vw;
 }
 
 .intro{
     margin-top: 17vh;
     font-family: 'Rochester', cursive;
-    font-size: 70px;
+    font-size: 5vw;
 }
 .name {
-    font-size: 120px;
+    font-size: 9vw;
     font-family: 'Roboto';
     font-weight: 700;
 }
@@ -35,7 +35,7 @@ body
 .sub-name{
     font-family:'Roboto';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.7vw;
 }
 
 .typething{
