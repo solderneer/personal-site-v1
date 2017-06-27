@@ -1,3 +1,6 @@
+.social-nav{
+    margin-top: -20px;
+}
 .social-nav .fa{
     font-size: 25px;
     float: top;
@@ -34,5 +37,8 @@
 
 @media (max-width: 576px)
 {
-    font-size: 25px;
+    .social-nav{
+        margin-left: auto;
+        margin-top: -97vh;
+    }
 }
