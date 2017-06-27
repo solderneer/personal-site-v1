@@ -181,11 +181,14 @@ section-subsubheader{
 .card{
     margin: 20px;
     margin-left: 100px;
+    color: black;
+    text-decoration: none;
 }
 
 .card:hover{
     background-color: #B71C1C;
     color: white;
+    text-decoration: none;
 }
 
 .card:hover .imgnext{
@@ -194,16 +197,23 @@ section-subsubheader{
 
 .card:hover .colorish{
     color: rgba(255, 255, 255, 1.0);
+    text-decoration: none;
 }
 
 .card:hover .colorish1{
     color: rgba(255, 255, 255, 1.0);
+    text-decoration: none;
 }
 
 .card-text{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.card-test:hover{
+    text-decoration: none;
 }
 
 .imgnext {

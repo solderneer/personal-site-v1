@@ -59,7 +59,7 @@
 			"file": "beta/index.html",
 			"settings":
 			{
-				"buffer_size": 8924,
+				"buffer_size": 8905,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -306,15 +306,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8924,
+						"buffer_size": 8905,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7387,
-								7387
+								7420,
+								7420
 							]
 						],
 						"settings":
@@ -325,7 +325,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2830.0,
+						"translation.y": 2427.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
