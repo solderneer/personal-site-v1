@@ -1,9 +1,11 @@
 .social-nav .fa{
     font-size: 25px;
+    float: top;
 }
 
 .social-nav a{
 	color: black;
+    line-height: 0px;
 }
 
 .fa-facebook:hover{
@@ -28,4 +30,9 @@
 
 .fa-envelope:hover{
     color: #fcaf45;
+}
+
+@media (max-width: 576px)
+{
+    font-size: 25px;
 }
