@@ -87,7 +87,7 @@ body
 .section-header{
     font-family: 'Roboto';
     font-weight: 100;
-    font-size: 80px;
+    font-size: 6vw;
     margin: 30px;
     margin-top: 50px;
     margin-left: 100px;
@@ -97,7 +97,7 @@ body
 .section-subheader{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 50px;
+    font-size: 5vw;
     text-align: center;
     margin-bottom: 30px;
     color: black;
@@ -106,7 +106,7 @@ body
 .section-subsub{
     font-family: 'Roboto';
     font-weight: 100;
-    font-size: 60px;
+    font-size: 4vw;
     margin-left: 100px;
     color: black;
 }
@@ -114,14 +114,14 @@ body
 section-subsubheader{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 30px;
+    font-size: 3vw;
     color: black;
 }
 
 .section-subsubright{
     font-family: 'Roboto';
     font-weight: 100;
-    font-size: 60px;
+    font-size: 4vw;
     float: right;
 }
 
@@ -130,7 +130,7 @@ section-subsubheader{
     margin-left: 100px;
     margin-top: 10px;
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .profile{
@@ -251,11 +251,11 @@ section-subsubheader{
 {
     .intro{
         margin-top: 70vh;
-        font-size: 10vw;
+        font-size: 13vw;
     }
 
     .name {
-        font-size: 14vw;
+        font-size: 15vw;
     }
 
     .sub-name{
@@ -273,4 +273,46 @@ section-subsubheader{
         padding: 5px 10px;
         margin-top: 11vh;
     }
+
+    .profile{
+        margin: 0px;
+    }
+
+    .section-header {
+        font-size: 15vw;
+        margin-left: 10px;
+    }
+    .section-subheader{
+        font-size: 10vw;
+        margin: 0px;
+    }
+
+    .section-subsub{
+        font-size: 8vw;
+        margin: 0px;
+    }
+
+    section-subsubheader{
+        font-size: 6vw;
+    }
+
+    .section-subsubright{
+        font-size: 8vw;
+    }
+
+    .section-content{
+        font-size: 5vw;
+        margin: 5px;
+    }
+
+
+    .card{
+        margin: 10px;
+
+    }
+
+    .card-text{
+        font-size: 3vw;
+    }
+
 }

@@ -38,7 +38,12 @@
 @media (max-width: 576px)
 {
     .social-nav{
-        margin-left: auto;
-        margin-top: -97vh;
+        margin: 50vw;
+        margin-top: -90vh;
+        font-size: 20px;
+    }
+
+    .fa {
+        margin: 5px;
     }
 }
