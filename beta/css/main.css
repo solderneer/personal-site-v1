@@ -191,7 +191,7 @@ section-subsubheader{
 
 .card:hover{
     background-color: #B71C1C;
-    color: white;
+    /*color: white;*/
     text-decoration: none;
 }
 
