@@ -1,4 +1,3 @@
-
 function isScrolledIntoView(elem)
 {
 	var docViewTop = $(window).scrollTop();

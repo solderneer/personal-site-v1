@@ -182,29 +182,29 @@ section-subsubheader{
     margin-bottom: 30px;
 }
 
-.card{
+.card1{
     margin: 20px;
     margin-left: 100px;
     color: black;
     text-decoration: none;
 }
 
-.card:hover{
+.card1:hover{
     background-color: #B71C1C;
     /*color: white;*/
     text-decoration: none;
 }
 
-.card:hover .imgnext{
+.card1:hover .imgnext{
     visibility: hidden;
 }
 
-.card:hover .colorish{
+.card1:hover .colorish{
     color: rgba(255, 255, 255, 1.0);
     text-decoration: none;
 }
 
-.card:hover .colorish1{
+.card1:hover .colorish1{
     color: rgba(255, 255, 255, 1.0);
     text-decoration: none;
 }
@@ -213,10 +213,6 @@ section-subsubheader{
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 20px;
-    text-decoration: none;
-}
-
-.card-test:hover{
     text-decoration: none;
 }
 
@@ -245,6 +241,23 @@ section-subsubheader{
 .nostyle:hover{
     text-decoration: none;
     color: rgba(255, 255, 255, 1.0);
+}
+
+.pic1{
+    width: 50vh;
+}
+
+.pic2{
+    width: 50vh;
+}
+
+.pic3{
+    width: 50vh;
+}
+
+.centerish{
+    width: 95%;
+    margin-left: 100px;
 }
 
 @media (max-width: 576px)
