@@ -5,7 +5,7 @@
 .m-p-g__thumbs-img {
   margin: 0;
   float: left;
-  vertical-align: bottom;
+  vertical-align: top;
   cursor: pointer;
   z-index: 1;
   position: relative;

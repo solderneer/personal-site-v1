@@ -247,11 +247,6 @@ section-subsubheader{
     width: 50vh;
 }
 
-.centerish{
-    width: 95%;
-    margin-left: 100px;
-}
-
 @media (max-width: 576px)
 {
     .intro{
