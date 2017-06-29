@@ -243,6 +243,9 @@ section-subsubheader{
     color: rgba(255, 255, 255, 1.0);
 }
 
+.project{
+    padding-bottom: 50px;
+}
 
 @media (max-width: 576px)
 {

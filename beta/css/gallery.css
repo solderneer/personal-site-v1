@@ -1,7 +1,9 @@
 .m-p-g {
   max-width: 90%;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
+
 .m-p-g__thumbs-img {
   margin: 0;
   float: left;

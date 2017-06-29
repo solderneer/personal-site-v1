@@ -63,9 +63,19 @@
 			"file": "beta/index.html",
 			"settings":
 			{
-				"buffer_size": 9724,
+				"buffer_size": 12378,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "beta/css/gallery.css",
+			"settings":
+			{
+				"buffer_size": 3326,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "$gallery-width: 100%;"
 			}
 		},
 		{
@@ -78,11 +88,27 @@
 			}
 		},
 		{
-			"file": "beta/css/social-nav.css",
+			"file": "beta/js/material-photo-gallery.js",
 			"settings":
 			{
-				"buffer_size": 577,
+				"buffer_size": 52364,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "beta/css/main.css",
+			"settings":
+			{
+				"buffer_size": 4720,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -218,14 +244,12 @@
 	"expanded_folders":
 	[
 		"/Users/solderneer/Documents/Projects/solderneer.github.io",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/assets",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/img",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js"
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css"
 	],
 	"file_history":
 	[
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/assets/sentibots.jpg",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/social-nav.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/index.html",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/main.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/js/main.js",
@@ -233,7 +257,6 @@
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/style.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/timeline.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/progress.css",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/css/social-nav.css",
 		"/Users/solderneer/Documents/Projects/solderneer.github.io/css/bootstrap.css",
 		"/Users/solderneer/Projects/test-avr/main.c",
 		"/Users/solderneer/Library/Application Support/Sublime Text 3/Packages/AVR/SublimeAVR.sublime-settings",
@@ -284,6 +307,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"click",
+			"cick",
+			"330",
+			"330px",
 			"40vh",
 			"font",
 			"color",
@@ -316,15 +343,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9724,
+						"buffer_size": 12378,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								951,
-								951
+								8970,
+								8970
 							]
 						],
 						"settings":
@@ -334,8 +361,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 1.0,
-						"translation.y": 2984.0,
+						"translation.x": 0.0,
+						"translation.y": 3361.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -343,6 +370,38 @@
 				},
 				{
 					"buffer": 1,
+					"file": "beta/css/gallery.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8,
+								8
+							]
+						],
+						"settings":
+						{
+							"auto_name": "$gallery-width: 100%;",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "beta/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -368,24 +427,55 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "beta/css/social-nav.css",
+					"buffer": 3,
+					"file": "beta/js/material-photo-gallery.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 577,
+						"buffer_size": 52364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								566,
-								566
+								39760,
+								39760
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 20856.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "beta/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3778,
+								3778
 							]
 						],
 						"settings":
@@ -396,10 +486,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 3629.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
