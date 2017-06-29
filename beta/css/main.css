@@ -243,9 +243,6 @@ section-subsubheader{
     color: rgba(255, 255, 255, 1.0);
 }
 
-.pic{
-    width: 70vh;
-}
 
 @media (max-width: 576px)
 {

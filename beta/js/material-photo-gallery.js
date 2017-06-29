@@ -5,7 +5,7 @@
  * MIT License
  */
 
-( function( window, factory ) { 'use strict';
+ ( function( window, factory ) { 'use strict';
   // universal module definition
 
   /*global define: false, module: false, require: false */
@@ -13,25 +13,25 @@
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( [
-      'eventEmitter/EventEmitter',
-      'eventie/eventie'
-    ], function( EventEmitter, eventie ) {
-      return factory( window, EventEmitter, eventie );
-    });
+           'eventEmitter/EventEmitter',
+           'eventie/eventie'
+           ], function( EventEmitter, eventie ) {
+            return factory( window, EventEmitter, eventie );
+          });
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      window,
-      require('wolfy87-eventemitter'),
-      require('eventie')
-    );
+                             window,
+                             require('wolfy87-eventemitter'),
+                             require('eventie')
+                             );
   } else {
     // browser global
     window.imagesLoaded = factory(
-      window,
-      window.EventEmitter,
-      window.eventie
-    );
+                                  window,
+                                  window.EventEmitter,
+                                  window.eventie
+                                  );
   }
 
 })( window,
@@ -40,10 +40,10 @@
 
 function factory( window, EventEmitter, eventie ) {
 
-'use strict';
+  'use strict';
 
-var $ = window.jQuery;
-var console = window.console;
+  var $ = window.jQuery;
+  var console = window.console;
 
 // -------------------------- helpers -------------------------- //
 
@@ -85,7 +85,7 @@ function makeArray( obj ) {
    * @param {Object or Function} options - if function, use as callback
    * @param {Function} onAlways - callback function
    */
-  function ImagesLoaded( elem, options, onAlways ) {
+   function ImagesLoaded( elem, options, onAlways ) {
     // coerce ImagesLoaded() without new, to be new ImagesLoaded()
     if ( !( this instanceof ImagesLoaded ) ) {
       return new ImagesLoaded( elem, options, onAlways );
@@ -139,7 +139,7 @@ function makeArray( obj ) {
   /**
    * @param {Node} element
    */
-  ImagesLoaded.prototype.addElementImages = function( elem ) {
+   ImagesLoaded.prototype.addElementImages = function( elem ) {
     // filter siblings
     if ( elem.nodeName == 'IMG' ) {
       this.addImage( elem );
@@ -200,7 +200,7 @@ function makeArray( obj ) {
   /**
    * @param {Image} img
    */
-  ImagesLoaded.prototype.addImage = function( img ) {
+   ImagesLoaded.prototype.addImage = function( img ) {
     var loadingImage = new LoadingImage( img );
     this.images.push( loadingImage );
   };
@@ -393,19 +393,19 @@ function makeArray( obj ) {
  * MIT license
  */
 
-/*jshint browser: true, undef: true, unused: true */
-/*global define: false, module: false */
+ /*jshint browser: true, undef: true, unused: true */
+ /*global define: false, module: false */
 
-( function( window ) {
+ ( function( window ) {
 
-'use strict';
+  'use strict';
 
-var docElem = document.documentElement;
+  var docElem = document.documentElement;
 
-var bind = function() {};
+  var bind = function() {};
 
-function getIEEvent( obj ) {
-  var event = window.event;
+  function getIEEvent( obj ) {
+    var event = window.event;
   // add event.target
   event.target = event.target || event.srcElement || obj;
   return event;
@@ -418,14 +418,14 @@ if ( docElem.addEventListener ) {
 } else if ( docElem.attachEvent ) {
   bind = function( obj, type, fn ) {
     obj[ type + fn ] = fn.handleEvent ?
-      function() {
-        var event = getIEEvent( obj );
-        fn.handleEvent.call( fn, event );
-      } :
-      function() {
-        var event = getIEEvent( obj );
-        fn.call( obj, event );
-      };
+    function() {
+      var event = getIEEvent( obj );
+      fn.handleEvent.call( fn, event );
+    } :
+    function() {
+      var event = getIEEvent( obj );
+      fn.call( obj, event );
+    };
     obj.attachEvent( "on" + type, obj[ type + fn ] );
   };
 }
@@ -476,8 +476,8 @@ if ( typeof define === 'function' && define.amd ) {
  * @preserve
  */
 
-;(function () {
-    'use strict';
+ ;(function () {
+  'use strict';
 
     /**
      * Class for managing events.
@@ -485,7 +485,7 @@ if ( typeof define === 'function' && define.amd ) {
      *
      * @class EventEmitter Manages event registering and emitting.
      */
-    function EventEmitter() {}
+     function EventEmitter() {}
 
     // Shortcuts to improve speed and size
     var proto = EventEmitter.prototype;
@@ -500,15 +500,15 @@ if ( typeof define === 'function' && define.amd ) {
      * @return {Number} Index of the specified listener, -1 if not found
      * @api private
      */
-    function indexOfListener(listeners, listener) {
-        var i = listeners.length;
-        while (i--) {
-            if (listeners[i].listener === listener) {
-                return i;
-            }
+     function indexOfListener(listeners, listener) {
+      var i = listeners.length;
+      while (i--) {
+        if (listeners[i].listener === listener) {
+          return i;
         }
+      }
 
-        return -1;
+      return -1;
     }
 
     /**
@@ -518,10 +518,10 @@ if ( typeof define === 'function' && define.amd ) {
      * @return {Function} The aliased method
      * @api private
      */
-    function alias(name) {
-        return function aliasClosure() {
-            return this[name].apply(this, arguments);
-        };
+     function alias(name) {
+      return function aliasClosure() {
+        return this[name].apply(this, arguments);
+      };
     }
 
     /**
@@ -533,27 +533,27 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {String|RegExp} evt Name of the event to return the listeners from.
      * @return {Function[]|Object} All listener functions for the event.
      */
-    proto.getListeners = function getListeners(evt) {
-        var events = this._getEvents();
-        var response;
-        var key;
+     proto.getListeners = function getListeners(evt) {
+      var events = this._getEvents();
+      var response;
+      var key;
 
         // Return a concatenated array of all matching events if
         // the selector is a regular expression.
         if (evt instanceof RegExp) {
-            response = {};
-            for (key in events) {
-                if (events.hasOwnProperty(key) && evt.test(key)) {
-                    response[key] = events[key];
-                }
+          response = {};
+          for (key in events) {
+            if (events.hasOwnProperty(key) && evt.test(key)) {
+              response[key] = events[key];
             }
+          }
         }
         else {
-            response = events[evt] || (events[evt] = []);
+          response = events[evt] || (events[evt] = []);
         }
 
         return response;
-    };
+      };
 
     /**
      * Takes a list of listener objects and flattens it into a list of listener functions.
@@ -561,15 +561,15 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Object[]} listeners Raw listener objects.
      * @return {Function[]} Just the listener functions.
      */
-    proto.flattenListeners = function flattenListeners(listeners) {
-        var flatListeners = [];
-        var i;
+     proto.flattenListeners = function flattenListeners(listeners) {
+      var flatListeners = [];
+      var i;
 
-        for (i = 0; i < listeners.length; i += 1) {
-            flatListeners.push(listeners[i].listener);
-        }
+      for (i = 0; i < listeners.length; i += 1) {
+        flatListeners.push(listeners[i].listener);
+      }
 
-        return flatListeners;
+      return flatListeners;
     };
 
     /**
@@ -578,16 +578,16 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {String|RegExp} evt Name of the event to return the listeners from.
      * @return {Object} All listener functions for an event in an object.
      */
-    proto.getListenersAsObject = function getListenersAsObject(evt) {
-        var listeners = this.getListeners(evt);
-        var response;
+     proto.getListenersAsObject = function getListenersAsObject(evt) {
+      var listeners = this.getListeners(evt);
+      var response;
 
-        if (listeners instanceof Array) {
-            response = {};
-            response[evt] = listeners;
-        }
+      if (listeners instanceof Array) {
+        response = {};
+        response[evt] = listeners;
+      }
 
-        return response || listeners;
+      return response || listeners;
     };
 
     /**
@@ -600,27 +600,27 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.addListener = function addListener(evt, listener) {
-        var listeners = this.getListenersAsObject(evt);
-        var listenerIsWrapped = typeof listener === 'object';
-        var key;
+     proto.addListener = function addListener(evt, listener) {
+      var listeners = this.getListenersAsObject(evt);
+      var listenerIsWrapped = typeof listener === 'object';
+      var key;
 
-        for (key in listeners) {
-            if (listeners.hasOwnProperty(key) && indexOfListener(listeners[key], listener) === -1) {
-                listeners[key].push(listenerIsWrapped ? listener : {
-                    listener: listener,
-                    once: false
-                });
-            }
+      for (key in listeners) {
+        if (listeners.hasOwnProperty(key) && indexOfListener(listeners[key], listener) === -1) {
+          listeners[key].push(listenerIsWrapped ? listener : {
+            listener: listener,
+            once: false
+          });
         }
+      }
 
-        return this;
+      return this;
     };
 
     /**
      * Alias of addListener
      */
-    proto.on = alias('addListener');
+     proto.on = alias('addListener');
 
     /**
      * Semi-alias of addListener. It will add a listener that will be
@@ -630,17 +630,17 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.addOnceListener = function addOnceListener(evt, listener) {
-        return this.addListener(evt, {
-            listener: listener,
-            once: true
-        });
+     proto.addOnceListener = function addOnceListener(evt, listener) {
+      return this.addListener(evt, {
+        listener: listener,
+        once: true
+      });
     };
 
     /**
      * Alias of addOnceListener.
      */
-    proto.once = alias('addOnceListener');
+     proto.once = alias('addOnceListener');
 
     /**
      * Defines an event name. This is required if you want to use a regex to add a listener to multiple events at once. If you don't do this then how do you expect it to know what event to add to? Should it just add to every possible match for a regex? No. That is scary and bad.
@@ -649,9 +649,9 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {String} evt Name of the event to create.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.defineEvent = function defineEvent(evt) {
-        this.getListeners(evt);
-        return this;
+     proto.defineEvent = function defineEvent(evt) {
+      this.getListeners(evt);
+      return this;
     };
 
     /**
@@ -660,11 +660,11 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {String[]} evts An array of event names to define.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.defineEvents = function defineEvents(evts) {
-        for (var i = 0; i < evts.length; i += 1) {
-            this.defineEvent(evts[i]);
-        }
-        return this;
+     proto.defineEvents = function defineEvents(evts) {
+      for (var i = 0; i < evts.length; i += 1) {
+        this.defineEvent(evts[i]);
+      }
+      return this;
     };
 
     /**
@@ -675,28 +675,28 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Function} listener Method to remove from the event.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.removeListener = function removeListener(evt, listener) {
-        var listeners = this.getListenersAsObject(evt);
-        var index;
-        var key;
+     proto.removeListener = function removeListener(evt, listener) {
+      var listeners = this.getListenersAsObject(evt);
+      var index;
+      var key;
 
-        for (key in listeners) {
-            if (listeners.hasOwnProperty(key)) {
-                index = indexOfListener(listeners[key], listener);
+      for (key in listeners) {
+        if (listeners.hasOwnProperty(key)) {
+          index = indexOfListener(listeners[key], listener);
 
-                if (index !== -1) {
-                    listeners[key].splice(index, 1);
-                }
-            }
+          if (index !== -1) {
+            listeners[key].splice(index, 1);
+          }
         }
+      }
 
-        return this;
+      return this;
     };
 
     /**
      * Alias of removeListener
      */
-    proto.off = alias('removeListener');
+     proto.off = alias('removeListener');
 
     /**
      * Adds listeners in bulk using the manipulateListeners method.
@@ -708,10 +708,10 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Function[]} [listeners] An optional array of listener functions to add.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.addListeners = function addListeners(evt, listeners) {
+     proto.addListeners = function addListeners(evt, listeners) {
         // Pass through to manipulateListeners
         return this.manipulateListeners(false, evt, listeners);
-    };
+      };
 
     /**
      * Removes listeners in bulk using the manipulateListeners method.
@@ -723,10 +723,10 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Function[]} [listeners] An optional array of listener functions to remove.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.removeListeners = function removeListeners(evt, listeners) {
+     proto.removeListeners = function removeListeners(evt, listeners) {
         // Pass through to manipulateListeners
         return this.manipulateListeners(true, evt, listeners);
-    };
+      };
 
     /**
      * Edits listeners in bulk. The addListeners and removeListeners methods both use this to do their job. You should really use those instead, this is a little lower level.
@@ -740,39 +740,39 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Function[]} [listeners] An optional array of listener functions to add/remove.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.manipulateListeners = function manipulateListeners(remove, evt, listeners) {
-        var i;
-        var value;
-        var single = remove ? this.removeListener : this.addListener;
-        var multiple = remove ? this.removeListeners : this.addListeners;
+     proto.manipulateListeners = function manipulateListeners(remove, evt, listeners) {
+      var i;
+      var value;
+      var single = remove ? this.removeListener : this.addListener;
+      var multiple = remove ? this.removeListeners : this.addListeners;
 
         // If evt is an object then pass each of its properties to this method
         if (typeof evt === 'object' && !(evt instanceof RegExp)) {
-            for (i in evt) {
-                if (evt.hasOwnProperty(i) && (value = evt[i])) {
+          for (i in evt) {
+            if (evt.hasOwnProperty(i) && (value = evt[i])) {
                     // Pass the single listener straight through to the singular method
                     if (typeof value === 'function') {
-                        single.call(this, i, value);
+                      single.call(this, i, value);
                     }
                     else {
                         // Otherwise pass back to the multiple function
                         multiple.call(this, i, value);
+                      }
                     }
+                  }
                 }
-            }
-        }
-        else {
+                else {
             // So evt must be a string
             // And listeners must be an array of listeners
             // Loop over it and pass each one to the multiple method
             i = listeners.length;
             while (i--) {
-                single.call(this, evt, listeners[i]);
+              single.call(this, evt, listeners[i]);
             }
-        }
+          }
 
-        return this;
-    };
+          return this;
+        };
 
     /**
      * Removes all listeners from a specified event.
@@ -783,38 +783,38 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {String|RegExp} [evt] Optional name of the event to remove all listeners for. Will remove from every event if not passed.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.removeEvent = function removeEvent(evt) {
-        var type = typeof evt;
-        var events = this._getEvents();
-        var key;
+     proto.removeEvent = function removeEvent(evt) {
+      var type = typeof evt;
+      var events = this._getEvents();
+      var key;
 
         // Remove different things depending on the state of evt
         if (type === 'string') {
             // Remove all listeners for the specified event
             delete events[evt];
-        }
-        else if (evt instanceof RegExp) {
+          }
+          else if (evt instanceof RegExp) {
             // Remove all events matching the regex.
             for (key in events) {
-                if (events.hasOwnProperty(key) && evt.test(key)) {
-                    delete events[key];
-                }
+              if (events.hasOwnProperty(key) && evt.test(key)) {
+                delete events[key];
+              }
             }
-        }
-        else {
+          }
+          else {
             // Remove all listeners in all events
             delete this._events;
-        }
+          }
 
-        return this;
-    };
+          return this;
+        };
 
     /**
      * Alias of removeEvent.
      *
      * Added to mirror the node API.
      */
-    proto.removeAllListeners = alias('removeEvent');
+     proto.removeAllListeners = alias('removeEvent');
 
     /**
      * Emits an event of your choice.
@@ -828,44 +828,44 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {Array} [args] Optional array of arguments to be passed to each listener.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.emitEvent = function emitEvent(evt, args) {
-        var listenersMap = this.getListenersAsObject(evt);
-        var listeners;
-        var listener;
-        var i;
-        var key;
-        var response;
+     proto.emitEvent = function emitEvent(evt, args) {
+      var listenersMap = this.getListenersAsObject(evt);
+      var listeners;
+      var listener;
+      var i;
+      var key;
+      var response;
 
-        for (key in listenersMap) {
-            if (listenersMap.hasOwnProperty(key)) {
-                listeners = listenersMap[key].slice(0);
-                i = listeners.length;
+      for (key in listenersMap) {
+        if (listenersMap.hasOwnProperty(key)) {
+          listeners = listenersMap[key].slice(0);
+          i = listeners.length;
 
-                while (i--) {
+          while (i--) {
                     // If the listener returns true then it shall be removed from the event
                     // The function is executed either with a basic call or an apply if there is an args array
                     listener = listeners[i];
 
                     if (listener.once === true) {
-                        this.removeListener(evt, listener.listener);
+                      this.removeListener(evt, listener.listener);
                     }
 
                     response = listener.listener.apply(this, args || []);
 
                     if (response === this._getOnceReturnValue()) {
-                        this.removeListener(evt, listener.listener);
+                      this.removeListener(evt, listener.listener);
                     }
+                  }
                 }
-            }
-        }
+              }
 
-        return this;
-    };
+              return this;
+            };
 
     /**
      * Alias of emitEvent
      */
-    proto.trigger = alias('emitEvent');
+     proto.trigger = alias('emitEvent');
 
     /**
      * Subtly different from emitEvent in that it will pass its arguments on to the listeners, as opposed to taking a single array of arguments to pass on.
@@ -875,9 +875,9 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {...*} Optional additional arguments to be passed to each listener.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.emit = function emit(evt) {
-        var args = Array.prototype.slice.call(arguments, 1);
-        return this.emitEvent(evt, args);
+     proto.emit = function emit(evt) {
+      var args = Array.prototype.slice.call(arguments, 1);
+      return this.emitEvent(evt, args);
     };
 
     /**
@@ -888,9 +888,9 @@ if ( typeof define === 'function' && define.amd ) {
      * @param {*} value The new value to check for when executing listeners.
      * @return {Object} Current instance of EventEmitter for chaining.
      */
-    proto.setOnceReturnValue = function setOnceReturnValue(value) {
-        this._onceReturnValue = value;
-        return this;
+     proto.setOnceReturnValue = function setOnceReturnValue(value) {
+      this._onceReturnValue = value;
+      return this;
     };
 
     /**
@@ -901,13 +901,13 @@ if ( typeof define === 'function' && define.amd ) {
      * @return {*|Boolean} The current value to check for or the default, true.
      * @api private
      */
-    proto._getOnceReturnValue = function _getOnceReturnValue() {
-        if (this.hasOwnProperty('_onceReturnValue')) {
-            return this._onceReturnValue;
-        }
-        else {
-            return true;
-        }
+     proto._getOnceReturnValue = function _getOnceReturnValue() {
+      if (this.hasOwnProperty('_onceReturnValue')) {
+        return this._onceReturnValue;
+      }
+      else {
+        return true;
+      }
     };
 
     /**
@@ -916,8 +916,8 @@ if ( typeof define === 'function' && define.amd ) {
      * @return {Object} The events storage object.
      * @api private
      */
-    proto._getEvents = function _getEvents() {
-        return this._events || (this._events = {});
+     proto._getEvents = function _getEvents() {
+      return this._events || (this._events = {});
     };
 
     /**
@@ -925,32 +925,32 @@ if ( typeof define === 'function' && define.amd ) {
      *
      * @return {Function} Non conflicting EventEmitter class.
      */
-    EventEmitter.noConflict = function noConflict() {
-        exports.EventEmitter = originalGlobalValue;
-        return EventEmitter;
+     EventEmitter.noConflict = function noConflict() {
+      exports.EventEmitter = originalGlobalValue;
+      return EventEmitter;
     };
 
     // Expose the class either via AMD, CommonJS or the global object
     if (typeof define === 'function' && define.amd) {
-        define(function () {
-            return EventEmitter;
-        });
+      define(function () {
+        return EventEmitter;
+      });
     }
     else if (typeof module === 'object' && module.exports){
-        module.exports = EventEmitter;
+      module.exports = EventEmitter;
     }
     else {
-        exports.EventEmitter = EventEmitter;
+      exports.EventEmitter = EventEmitter;
     }
-}.call(this));
+  }.call(this));
 
 },{}],4:[function(require,module,exports){
-(function(root, factory) {
-	if (typeof exports === 'object') {
-		module.exports = factory();
-	} else {
-		root.CreateControls = factory();
-	}
+  (function(root, factory) {
+   if (typeof exports === 'object') {
+    module.exports = factory();
+  } else {
+    root.CreateControls = factory();
+  }
 })(this, function() {
 
 	'use strict';
@@ -1032,21 +1032,21 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
  *
  */
 
-(function(root, factory) {
-	if (typeof define === 'function' && define.amd) {
-		define(factory);
-	} else if (typeof exports === 'object') {
-		module.exports = factory(
-			require('imagesLoaded'),
-			require('./vendor/google-image-layout'),
-			require('./create-controls')
-		);
-	} else {
-		root.Gallery = factory(
-			window.imagesLoaded,
-			window.GoogleImageLayout
-		);
-	}
+ (function(root, factory) {
+   if (typeof define === 'function' && define.amd) {
+    define(factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(
+                             require('imagesLoaded'),
+                             require('./vendor/google-image-layout'),
+                             require('./create-controls')
+                             );
+  } else {
+    root.Gallery = factory(
+                           window.imagesLoaded,
+                           window.GoogleImageLayout
+                           );
+  }
 })(this, function(imagesLoaded, GoogleImageLayout, CreateControls) {
 
 	'use strict';
@@ -1058,68 +1058,68 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @param {HTMLElement} element - The gallery element.
 	 */
 
-	var Gallery = function(element) {
-		this._element = element;
-		this._layout();
-	};
+  var Gallery = function(element) {
+    this._element = element;
+    this._layout();
+  };
 
 	/**
 	 * Detect CSS transform support
 	 */
 
-	var transform = false,
-	    transformString = 'transform',
-	    domPrefixes = 'Webkit Moz ms'.split(' '),
-	    pfx = '',
-	    elem = document.createElement('div');
+  var transform = false,
+  transformString = 'transform',
+  domPrefixes = 'Webkit Moz ms'.split(' '),
+  pfx = '',
+  elem = document.createElement('div');
 
-	if (elem.style.transform !== undefined) { transform = true; }
+  if (elem.style.transform !== undefined) { transform = true; }
 
-	if (transform === false) {
-	  for (var i = 0; i < domPrefixes.length; i++) {
-	    if (elem.style[domPrefixes[i] + 'Transform'] !== undefined) {
-	      pfx = domPrefixes[i];
-	      transformString = pfx + 'Transform';
-	      transform = true;
-	      break;
-	    }
-	  }
-	}
+  if (transform === false) {
+   for (var i = 0; i < domPrefixes.length; i++) {
+     if (elem.style[domPrefixes[i] + 'Transform'] !== undefined) {
+       pfx = domPrefixes[i];
+       transformString = pfx + 'Transform';
+       transform = true;
+       break;
+     }
+   }
+ }
 
 	/**
 	 * Detect transitionend event support
 	 */
 
-	var transitions = {
-	    'transition': 'transitionend',
-	    'WebkitTransition': 'webkitTransitionEnd',
-	    'MozTransition': 'transitionend',
-	    'OTransition': 'otransitionend'
-	  },
-	  transitionendString,
-	  elem = document.createElement('div');
-	 
-  for (var t in transitions) {
-    if (typeof elem.style[t] !== 'undefined') {
-      transitionendString = transitions[t];
-      break;
-    }
+  var transitions = {
+   'transition': 'transitionend',
+   'WebkitTransition': 'webkitTransitionEnd',
+   'MozTransition': 'transitionend',
+   'OTransition': 'otransitionend'
+ },
+ transitionendString,
+ elem = document.createElement('div');
+ 
+ for (var t in transitions) {
+  if (typeof elem.style[t] !== 'undefined') {
+    transitionendString = transitions[t];
+    break;
   }
+}
 
-  function debounce(func, wait, immediate) {
-  	var timeout;
-  	return function() {
-  		var context = this, args = arguments;
-  		var later = function() {
-  			timeout = null;
-  			if (!immediate) func.apply(context, args);
-  		};
-  		var callNow = immediate && !timeout;
-  		clearTimeout(timeout);
-  		timeout = setTimeout(later, wait);
-  		if (callNow) func.apply(context, args);
-  	};
-  }
+function debounce(func, wait, immediate) {
+ var timeout;
+ return function() {
+  var context = this, args = arguments;
+  var later = function() {
+   timeout = null;
+   if (!immediate) func.apply(context, args);
+ };
+ var callNow = immediate && !timeout;
+ clearTimeout(timeout);
+ timeout = setTimeout(later, wait);
+ if (callNow) func.apply(context, args);
+};
+}
 
 	/**
 	 * Css class names stored as strings.
@@ -1127,84 +1127,84 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._cssClasses = {
-		GALLERY: 'm-p-g',
-		THUMBS_BOX: 'm-p-g__thumbs',
-		THUMB_IMG: 'm-p-g__thumbs-img',
-		FULL_BOX: 'm-p-g__fullscreen',
-		FULL_IMG: 'm-p-g__fullscreen-img',
-		CONTROLS: 'm-p-g__controls',
-		CONTROLS_CLOSE: 'm-p-g__controls-close',
-		CONTROLS_NEXT: 'm-p-g__controls-arrow--next',
-		CONTROLS_PREV: 'm-p-g__controls-arrow--prev'
-	};
+  Gallery.prototype._cssClasses = {
+    GALLERY: 'm-p-g',
+    THUMBS_BOX: 'm-p-g__thumbs',
+    THUMB_IMG: 'm-p-g__thumbs-img',
+    FULL_BOX: 'm-p-g__fullscreen',
+    FULL_IMG: 'm-p-g__fullscreen-img',
+    CONTROLS: 'm-p-g__controls',
+    CONTROLS_CLOSE: 'm-p-g__controls-close',
+    CONTROLS_NEXT: 'm-p-g__controls-arrow--next',
+    CONTROLS_PREV: 'm-p-g__controls-arrow--prev'
+  };
 
 	/**
 	 * Init the Google Image Layout.
 	 */
 
-	Gallery.prototype._layout = function() {
-		var gallery = this;
-		gallery._thumbs = [];
-		var imgLoad = imagesLoaded(document.querySelector('div[data-google-image-layout]'));
+  Gallery.prototype._layout = function() {
+    var gallery = this;
+    gallery._thumbs = [];
+    var imgLoad = imagesLoaded(document.querySelector('div[data-google-image-layout]'));
 
-		imgLoad.on('progress', function(instance, image) {
-		  image.img.setAttribute('data-width', image.img.offsetWidth);
-		  image.img.setAttribute('data-height', image.img.offsetHeight);
+    imgLoad.on('progress', function(instance, image) {
+      image.img.setAttribute('data-width', image.img.offsetWidth);
+      image.img.setAttribute('data-height', image.img.offsetHeight);
 
-		  gallery._thumbs.push(image.img);
-		});
+      gallery._thumbs.push(image.img);
+    });
 
-		imgLoad.on('done', function(instance) {
-		  var g = new GoogleImageLayout().init({
-		  	after: function() {
-		  		gallery.init();
-		  		gallery._loadFullImgs();
-		  	}
-		  });
-		});
+    imgLoad.on('done', function(instance) {
+      var g = new GoogleImageLayout().init({
+       after: function() {
+        gallery.init();
+        gallery._loadFullImgs();
+      }
+    });
+    });
 
-		imgLoad.on('fail', function(instance) {
-			var galleryEl = gallery._element;
-			var alertBox = document.createElement('div');
-			alertBox.className = 'm-p-g__alertBox';
-			var alertBoxTitle = document.createElement('h2');
-			alertBoxTitle.innerHTML = 'Error';
-			var alertBoxMessage = document.createElement('p');
-			alertBox.appendChild(alertBoxTitle);
-			alertBox.appendChild(alertBoxMessage);
-			galleryEl.appendChild(alertBox);
+    imgLoad.on('fail', function(instance) {
+     var galleryEl = gallery._element;
+     var alertBox = document.createElement('div');
+     alertBox.className = 'm-p-g__alertBox';
+     var alertBoxTitle = document.createElement('h2');
+     alertBoxTitle.innerHTML = 'Error';
+     var alertBoxMessage = document.createElement('p');
+     alertBox.appendChild(alertBoxTitle);
+     alertBox.appendChild(alertBoxMessage);
+     galleryEl.appendChild(alertBox);
 
-			var brokenImages = [];
-			instance.images.forEach(function(image) {
-				if (!image.isLoaded) {
-					brokenImages.push(image.img.currentSrc);
-				}
-			});
+     var brokenImages = [];
+     instance.images.forEach(function(image) {
+      if (!image.isLoaded) {
+       brokenImages.push(image.img.currentSrc);
+     }
+   });
 
-			alertBoxMessage.innerHTML = 'Failed to load:' + ' ' + brokenImages;
-			
-		});
+     alertBoxMessage.innerHTML = 'Failed to load:' + ' ' + brokenImages;
+     
+   });
 
-		window.onresize = debounce(function() {
-		  var g = new GoogleImageLayout().init({
-		  	after: function() {
-		  		setTimeout(function() {
-		  			gallery._handleResize();
-		  		}, 500);
-		  	}
-		  });
-		}, 25);
-	};
+    window.onresize = debounce(function() {
+      var g = new GoogleImageLayout().init({
+       after: function() {
+        setTimeout(function() {
+         gallery._handleResize();
+       }, 500);
+      }
+    });
+    }, 25);
+  };
 
 	/**
 	 * Init the Gallery component.
 	 */
 
-	Gallery.prototype.init = function() {
+  Gallery.prototype.init = function() {
 
-		var controls = CreateControls.init();
-		this._element.appendChild(controls);
+    var controls = CreateControls.init();
+    this._element.appendChild(controls);
 
 		// Root element.
 		this._gallery = this._element;
@@ -1244,12 +1244,12 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._bindEvents = function() {
+  Gallery.prototype._bindEvents = function() {
 
-		for (var i = 0, ii = this._thumbs.length; i < ii; i++) {
+    for (var i = 0, ii = this._thumbs.length; i < ii; i++) {
 
 			// Add click event to each thumbnail.
-			this._thumbs[i].addEventListener('click', this._handleThumbClick.bind(this));
+			//this._thumbs[i].addEventListener('click', this._handleThumbClick.bind(this));
 
 			// Add hover event to each thumbnail.
 			this._thumbs[i].addEventListener('mouseover', this._handleThumbHover.bind(this));
@@ -1281,11 +1281,11 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._loadFullImgs = function() {
+  Gallery.prototype._loadFullImgs = function() {
 
-		var src, img;
+    var src, img;
 
-		for (var i = 0, ii = this._thumbs.length; i < ii; i++) {
+    for (var i = 0, ii = this._thumbs.length; i < ii; i++) {
 
 			// Source of full size image.
 			src = this._thumbs[i].getAttribute('data-full');
@@ -1351,52 +1351,52 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._transformFullImg = function(fullImg, thumb, fullImgSize) {
+  Gallery.prototype._transformFullImg = function(fullImg, thumb, fullImgSize) {
 
-		var scaleX, scaleY, transX, transY;
+    var scaleX, scaleY, transX, transY;
 
-		fullImg = fullImg.getBoundingClientRect();
-		thumb = thumb.getBoundingClientRect();
+    fullImg = fullImg.getBoundingClientRect();
+    thumb = thumb.getBoundingClientRect();
 
-		if (fullImgSize) {
-			scaleX = (thumb.width / fullImgSize.width).toFixed(3);
-			scaleY = (thumb.height / fullImgSize.height).toFixed(3);
-			transX = thumb.left - fullImgSize.left + (fullImgSize.width / 2);
-			transY = thumb.top - fullImgSize.top + (fullImgSize.height / 2);
-		} else {
-			scaleX = (thumb.width / fullImg.width).toFixed(3);
-			scaleY = (thumb.height / fullImg.height).toFixed(3);
-			transX = thumb.left - fullImg.left + (fullImg.width / 2);
-			transY = thumb.top - fullImg.top + (fullImg.height / 2);
-		}
+    if (fullImgSize) {
+     scaleX = (thumb.width / fullImgSize.width).toFixed(3);
+     scaleY = (thumb.height / fullImgSize.height).toFixed(3);
+     transX = thumb.left - fullImgSize.left + (fullImgSize.width / 2);
+     transY = thumb.top - fullImgSize.top + (fullImgSize.height / 2);
+   } else {
+     scaleX = (thumb.width / fullImg.width).toFixed(3);
+     scaleY = (thumb.height / fullImg.height).toFixed(3);
+     transX = thumb.left - fullImg.left + (fullImg.width / 2);
+     transY = thumb.top - fullImg.top + (fullImg.height / 2);
+   }
 
-		var transform = 'translate(' + transX + 'px,' + transY + 'px) scale(' + scaleX + ',' + scaleY + ')';
+   var transform = 'translate(' + transX + 'px,' + transY + 'px) scale(' + scaleX + ',' + scaleY + ')';
 
-		return transform;
-	};
+   return transform;
+ };
 
-	Gallery.prototype._resetFullImg = function() {
+ Gallery.prototype._resetFullImg = function() {
 
-		this._fullImgsTransforms = [];
+  this._fullImgsTransforms = [];
 
-		for (var i = 0, ii = this._fullImgs.length; i < ii; i++) {
-			
-			var size = {
-				width: this._fullImgDimensions[i].width,
-				height: this._fullImgDimensions[i].height,
-				left: this._fullImgDimensions[i].left,
-				top: this._fullImgDimensions[i].top
-			};
+  for (var i = 0, ii = this._fullImgs.length; i < ii; i++) {
+   
+   var size = {
+    width: this._fullImgDimensions[i].width,
+    height: this._fullImgDimensions[i].height,
+    left: this._fullImgDimensions[i].left,
+    top: this._fullImgDimensions[i].top
+  };
 
-			if (i === this._thumbIndex && this._fullImgOpen) {
-				this._fullImgs[i].removeAttribute('style');
-				this._positionFullImgs.call(this, this._fullImgs[i], i, false);
-			} else {
-				this._fullImgs[i].removeAttribute('style');
-				this._positionFullImgs.call(this, this._fullImgs[i], i);
-			}
-		}
-	};
+  if (i === this._thumbIndex && this._fullImgOpen) {
+    this._fullImgs[i].removeAttribute('style');
+    this._positionFullImgs.call(this, this._fullImgs[i], i, false);
+  } else {
+    this._fullImgs[i].removeAttribute('style');
+    this._positionFullImgs.call(this, this._fullImgs[i], i);
+  }
+}
+};
 
 	/**
 	 * Thumbnail hover event.
@@ -1405,11 +1405,11 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._handleThumbHover = function(event) {
-		if (this._fullImgsLoaded && !this._fullImgOpen) {
-			this._transformThumbSetup.call(this, event);
-		}
-	};
+  Gallery.prototype._handleThumbHover = function(event) {
+    if (this._fullImgsLoaded && !this._fullImgOpen) {
+     this._transformThumbSetup.call(this, event);
+   }
+ };
 
 	/**
 	 * Thumbnail click event.
@@ -1418,9 +1418,9 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._handleThumbClick = function(event) {
+  Gallery.prototype._handleThumbClick = function(event) {
 
-		if (this._thumb != event.target) {
+    if (this._thumb != event.target) {
 			// Cache the thumb being hovered over.
 			this._thumb = event.target;
 
@@ -1448,9 +1448,9 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._transformThumbSetup = function(event, fn) {
+  Gallery.prototype._transformThumbSetup = function(event, fn) {
 
-		this._setupComplete = false;
+    this._setupComplete = false;
 
 		// Cache the thumb being hovered over.
 		this._thumb = event.target;
@@ -1487,9 +1487,9 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._activateFullBox = function() {
-		this._fullBox.classList.add('active');
-	};
+  Gallery.prototype._activateFullBox = function() {
+    this._fullBox.classList.add('active');
+  };
 
 	/**
 	 * Show the controls.
@@ -1497,9 +1497,9 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._activateControls = function() {
-		this._controls.classList.add('active');
-	};
+  Gallery.prototype._activateControls = function() {
+    this._controls.classList.add('active');
+  };
 
 	/**
 	 * CloseBtn click event.
@@ -1507,38 +1507,38 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._handleClose = function() {
-		if (this._fullImgOpen) {
-			this._closeFullImg.call(this);
-		}
-	};
+  Gallery.prototype._handleClose = function() {
+    if (this._fullImgOpen) {
+     this._closeFullImg.call(this);
+   }
+ };
 
-	Gallery.prototype._closeFullImg = function() {
+ Gallery.prototype._closeFullImg = function() {
 
-		var animation = function() {
-			this._fullBox.classList.remove('active');
-			this._controls.classList.remove('active');
-			this._fullImg.style[transformString] = this._fullImgsTransforms[this._thumbIndex];
-			this._thumb.classList.remove('hide');
+  var animation = function() {
+   this._fullBox.classList.remove('active');
+   this._controls.classList.remove('active');
+   this._fullImg.style[transformString] = this._fullImgsTransforms[this._thumbIndex];
+   this._thumb.classList.remove('hide');
 
-			this._fullImgs.forEach(function(img) {
-				img.classList.remove('almost-active');
-			});
+   this._fullImgs.forEach(function(img) {
+    img.classList.remove('almost-active');
+  });
 
-			var fullImgTransEnd = function() {
-				this._fullImg.classList.remove('active');
-				this._fullImg.removeEventListener(transitionendString, fullImgTransEnd);
+   var fullImgTransEnd = function() {
+    this._fullImg.classList.remove('active');
+    this._fullImg.removeEventListener(transitionendString, fullImgTransEnd);
 
-				this._fullImgOpen = false;
-			}.bind(this);
+    this._fullImgOpen = false;
+  }.bind(this);
 
-			this._fullImg.addEventListener(transitionendString, fullImgTransEnd);
-			this._enableScroll();
-			
-		}.bind(this);
+  this._fullImg.addEventListener(transitionendString, fullImgTransEnd);
+  this._enableScroll();
+  
+}.bind(this);
 
-		window.requestAnimationFrame(animation);
-	};
+window.requestAnimationFrame(animation);
+};
 
 	/**
 	 * NextBtn click event.
@@ -1546,11 +1546,11 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._handleNext = function() {
-		if (this._fullImgOpen) {
-			this._changeImg.call(this, 'next');
-		}
-	};
+  Gallery.prototype._handleNext = function() {
+    if (this._fullImgOpen) {
+     this._changeImg.call(this, 'next');
+   }
+ };
 
 	/**
 	 * PrevBtn click event.
@@ -1558,11 +1558,11 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._handlePrev = function() {
-		if (this._fullImgOpen) {
-			this._changeImg.call(this, 'prev');
-		}
-	};
+  Gallery.prototype._handlePrev = function() {
+    if (this._fullImgOpen) {
+     this._changeImg.call(this, 'prev');
+   }
+ };
 
 	/**
 	 * Changes the active full size image and active thumbnail based on which
@@ -1572,25 +1572,25 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._changeImg = function(dir) {
+  Gallery.prototype._changeImg = function(dir) {
 
-		this._thumbIndex = this._fullImgs.indexOf(this._fullImg);
-		dir === 'next' ? this._thumbIndex += 1 : this._thumbIndex -= 1;
+    this._thumbIndex = this._fullImgs.indexOf(this._fullImg);
+    dir === 'next' ? this._thumbIndex += 1 : this._thumbIndex -= 1;
 
-		this._newFullImg = dir === 'next' ? this._fullImg.nextElementSibling : this._fullImg.previousElementSibling;
+    this._newFullImg = dir === 'next' ? this._fullImg.nextElementSibling : this._fullImg.previousElementSibling;
 
-		if (!this._newFullImg || this._newFullImg.nodeName !== 'IMG') {
-			this._newFullImg = dir === 'next' ? this._newFullImg = this._fullImgs[0] : this._newFullImg = this._fullImgs[this._fullImgs.length - 1];
-			dir === 'next' ? this._thumbIndex = 0 : this._thumbIndex = this._fullImgs.length - 1;
-		}
+    if (!this._newFullImg || this._newFullImg.nodeName !== 'IMG') {
+     this._newFullImg = dir === 'next' ? this._newFullImg = this._fullImgs[0] : this._newFullImg = this._fullImgs[this._fullImgs.length - 1];
+     dir === 'next' ? this._thumbIndex = 0 : this._thumbIndex = this._fullImgs.length - 1;
+   }
 
-		this._newFullImg.style[transformString] = 'translate3d(0,0,0)';
-		this._fullImg.classList.remove('active');
-		this._fullImg.style[transformString] = this._fullImgsTransforms[this._thumbIndex-1];
+   this._newFullImg.style[transformString] = 'translate3d(0,0,0)';
+   this._fullImg.classList.remove('active');
+   this._fullImg.style[transformString] = this._fullImgsTransforms[this._thumbIndex-1];
 
-		this._fullImg = this._newFullImg;
-		this._fullImg.classList.add('active');
-	};
+   this._fullImg = this._newFullImg;
+   this._fullImg.classList.add('active');
+ };
 
 	/**
 	 * Disables scrolling. Activated when a full size image is open.
@@ -1598,17 +1598,17 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._disableScroll = function() {
+  Gallery.prototype._disableScroll = function() {
 
-		function preventDefault(e) {
-			e = e || window.event;
-			if (e.preventDefault) e.preventDefault();
-			e.returnValue = false;  
-		}
+    function preventDefault(e) {
+     e = e || window.event;
+     if (e.preventDefault) e.preventDefault();
+     e.returnValue = false;  
+   }
 
-		window.onwheel = preventDefault;
-		window.ontouchmove  = preventDefault;
-	};
+   window.onwheel = preventDefault;
+   window.ontouchmove  = preventDefault;
+ };
 
 	/**
 	 * Enables scrolling. Activated when a full size image is closed.
@@ -1616,12 +1616,12 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * @private
 	 */
 
-	Gallery.prototype._enableScroll = function() {
-		window.onwheel = null; 
-		window.ontouchmove = null;
-	};
+  Gallery.prototype._enableScroll = function() {
+    window.onwheel = null; 
+    window.ontouchmove = null;
+  };
 
-	return Gallery;
+  return Gallery;
 });
 
 
@@ -1636,16 +1636,16 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
  *
  */
 
-(function (root, factory) {
-	if (typeof define === 'function' && define.amd) {
-		define(function() {
-			return factory(root);
-		});
-	} else if (typeof exports === 'object') {
-		module.exports = factory;
-	} else {
-		root.GoogleImageLayout = factory(root);
-	}
+ (function (root, factory) {
+   if (typeof define === 'function' && define.amd) {
+    define(function() {
+     return factory(root);
+   });
+  } else if (typeof exports === 'object') {
+    module.exports = factory;
+  } else {
+    root.GoogleImageLayout = factory(root);
+  }
 })(this, function (root) {
 
 	'use strict';
@@ -1682,7 +1682,7 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 	 * 
 	 * @return {[type]}        the height
 	 */
-	var _getHeigth = function(images, width, margin) {
+  var _getHeigth = function(images, width, margin) {
 
 		// width -= images.length * margin;
 		// width -= images.length;
@@ -1734,29 +1734,29 @@ window.MaterialPhotoGallery = MaterialPhotoGallery;
 		//get the data attribute
 		
 		var containerWidth = elem.clientWidth,
-			maxHeight = parseInt(elem.getAttribute('data-max-height') || 120);
+   maxHeight = parseInt(elem.getAttribute('data-max-height') || 120);
 
-		var imgNodes = turnObjToArray(elem.querySelectorAll('img'));
+   var imgNodes = turnObjToArray(elem.querySelectorAll('img'));
 
-		w : while (imgNodes.length > 0) {
+   w : while (imgNodes.length > 0) {
 
-			for (var i = 1 ; i <= imgNodes.length; i++) {
-				var slice = imgNodes.slice(0, i);
-				var h = _getHeigth(slice, containerWidth, margin);
+     for (var i = 1 ; i <= imgNodes.length; i++) {
+      var slice = imgNodes.slice(0, i);
+      var h = _getHeigth(slice, containerWidth, margin);
 
-				if (h < maxHeight) {
-					_setHeight(slice, h);
-					imgNodes = imgNodes.slice(i);
-					continue w;
-				}
-			}
+      if (h < maxHeight) {
+       _setHeight(slice, h);
+       imgNodes = imgNodes.slice(i);
+       continue w;
+     }
+   }
 
-			_setHeight(slice, Math.min(maxHeight, h));
-			break;
-		}
+   _setHeight(slice, Math.min(maxHeight, h));
+   break;
+ }
 
-	};
+};
 
-	return GoogleImageLayout;
+return GoogleImageLayout;
 });
 },{}]},{},[5]);
