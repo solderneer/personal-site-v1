@@ -38,12 +38,10 @@
 @media (max-width: 576px)
 {
     .social-nav{
-        margin: 50vw;
-        margin-top: -90vh;
-        font-size: 20px;
+        margin-right: 10px;
     }
-
-    .fa {
-        margin: 5px;
+    .social-nav .fa{
+        font-size: 15px;
+        float: top;
     }
 }

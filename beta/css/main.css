@@ -97,7 +97,7 @@ body
 .section-subheader{
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 5vw;
+    font-size: 3vw;
     text-align: center;
     margin-bottom: 30px;
     color: black;
@@ -155,21 +155,21 @@ section-subsubheader{
 #no1{
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 70px;
+    font-size: 5vw;
     color: #B71C1C;
 }
 
 #no2{
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 70px;
+    font-size: 5vw;
     color: #1B5E20;
 }
 
 #no3{
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 70px;
+    font-size: 5vw;
     color: #FF6D00;
 }
 
@@ -249,13 +249,18 @@ section-subsubheader{
 
 @media (max-width: 576px)
 {
+    .jumbotron{
+        padding: 0px;
+        height: initial;
+    }
+
     .intro{
-        margin-top: 70vh;
-        font-size: 13vw;
+        margin-top: 60vh;
+        font-size: 12vw;
     }
 
     .name {
-        font-size: 15vw;
+        font-size: 12vw;
     }
 
     .sub-name{
@@ -265,6 +270,7 @@ section-subsubheader{
     .typething{
         font-size: 4vh;
         height: 30vh;
+        display: none;
     }
 
     .wrap{
@@ -274,22 +280,41 @@ section-subsubheader{
         margin-top: 11vh;
     }
 
-    .profile{
-        margin: 0px;
+    .section1{
+        margin-top: 15vh;
     }
 
+    .profile{
+        margin: 10px;
+        margin-top: 2vh;
+    }
+
+    #no1{
+        font-size: 15vw;
+    }
+
+    #no2{
+        font-size: 15vw;
+    }
+
+    #no3{
+        font-size: 15vw;
+    }
     .section-header {
         font-size: 15vw;
-        margin-left: 10px;
+        margin: 10px;
+        margin-top: 5vh;
     }
     .section-subheader{
         font-size: 10vw;
-        margin: 0px;
+        margin: 10px;
+        margin-top: 30px;
     }
 
     .section-subsub{
-        font-size: 8vw;
-        margin: 0px;
+        font-size: 10vw;
+        margin: 10px;
+        margin-top: 30px;
     }
 
     section-subsubheader{
@@ -305,14 +330,12 @@ section-subsubheader{
         margin: 5px;
     }
 
-
-    .card{
+    .card1{
         margin: 10px;
-
     }
 
     .card-text{
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
 }

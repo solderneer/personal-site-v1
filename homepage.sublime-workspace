@@ -63,7 +63,7 @@
 			"file": "beta/index.html",
 			"settings":
 			{
-				"buffer_size": 13206,
+				"buffer_size": 11973,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -234,8 +234,7 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/solderneer.github.io",
-		"/Users/solderneer/Documents/Projects/solderneer.github.io/beta/assets"
+		"/Users/solderneer/Documents/Projects/solderneer.github.io"
 	],
 	"file_history":
 	[
@@ -326,7 +325,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -335,15 +334,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13206,
+						"buffer_size": 11973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11930,
-								11930
+								10269,
+								10269
 							]
 						],
 						"settings":
@@ -354,10 +353,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3301.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -386,10 +385,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 302.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
