@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var typyViewcnt = 0;
 	var qualsViewcnt = 0;
-	var progressViewsnt = 0;
+	var progress1Viewcnt = 0;
+	var progress2Viewcnt = 0;
 
 	var bar1 = createBar(document.getElementById('progressbar1'), "#C62828", "#ED6A5A", 'Analog Electronics<span style="float: right;font-weight: 300">');
 	var bar2 = createBar(document.getElementById('progressbar2'), "#1B5E20", "#ED6A5A", 'Digital Electronics<span style="float: right;font-weight: 300">');
@@ -67,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	document.addEventListener('scroll', function(e) {
 		typy = document.getElementById('typy');
 		quals = document.getElementsByClassName('quals')[0];
-		progress = document.getElementById('progress');
+		progress1 = document.getElementById('progress1');
+		progress2 = document.getElementById('progress2');
 
 		if(isScrolledIntoView(typy) && (typyViewcnt == 0))
 		{
@@ -108,20 +110,26 @@ document.addEventListener("DOMContentLoaded", function(){
 			qualsViewcnt++
 		}
 
-		if(isScrolledIntoView(progress) && (progressViewsnt == 0))
+		if(isScrolledIntoView(progress1) && (progress1Viewcnt == 0))
 		{
 			bar1.animate(0.6);
 			bar2.animate(0.7);
 			bar3.animate(0.85);
 			bar4.animate(0.85);
 			bar5.animate(0.5);
+
+			progress1Viewcnt++;
+		}
+
+		if(isScrolledIntoView(progress2) && (progress2Viewcnt == 0))
+		{
 			bar6.animate(0.85);
 			bar7.animate(0.75);
 			bar8.animate(0.4);
 			bar9.animate(0.6);
 			bar10.animate(0.3);
 
-			progressViewsnt++;
+			progress2Viewcnt++;
 		}
 
 	});
