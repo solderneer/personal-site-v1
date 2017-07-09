@@ -98,13 +98,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		if(isScrolledIntoView(quals) && (qualsViewcnt == 0))
 		{
-			var numAnim1 = new CountUp(document.getElementById('no1'), 0, 24);
+			var numAnim1 = new CountUp(document.getElementById('no1'), 0, 10);
 			numAnim1.start();
 
-			var numAnim2 = new CountUp(document.getElementById('no2'), 0, 133);
+			var numAnim2 = new CountUp(document.getElementById('no2'), 0, 5);
 			numAnim2.start();
 
-			var numAnim3 = new CountUp(document.getElementById('no3'), 0, 19);
+			var numAnim3 = new CountUp(document.getElementById('no3'), 0, 2);
 			numAnim3.start();
 
 			qualsViewcnt++
