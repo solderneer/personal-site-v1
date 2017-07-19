@@ -247,6 +247,11 @@ section-subsubheader{
     padding-bottom: 50px;
 }
 
+.footer{
+    background-color: #C62828;
+    height: 10vh;
+}
+
 @media (max-width: 576px)
 {
     .jumbotron{

@@ -67,7 +67,16 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 11325,
+				"buffer_size": 11344,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 4542,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -203,7 +212,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/solderneer/Documents/Projects/solderneer.github.io"
+		"/Users/solderneer/Documents/Projects/solderneer.github.io",
+		"/Users/solderneer/Documents/Projects/solderneer.github.io/js"
 	],
 	"file_history":
 	[
@@ -296,7 +306,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -305,15 +315,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11325,
+						"buffer_size": 11344,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2721,
-								2721
+								4006,
+								4006
 							]
 						],
 						"settings":
@@ -324,6 +334,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 1944.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4069,
+								4069
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 10.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -400,7 +440,7 @@
 		[
 			[
 				"",
-				"~/Documents/Projects/todo-cli/todocli.sublime-project"
+				"~/Documents/Projects/KerbalKontrol/code/io-board/SublimeAVR.sublime-project"
 			]
 		],
 		"width": 380.0
