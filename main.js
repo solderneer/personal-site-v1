@@ -9,7 +9,7 @@ var quotes = ["Emotions are abstract logic.",
               "Change is the only constant",
               "Somewhere in between emotional and emotionless"];
 
-var colors = ["#F57F17", "#424242", "#880E4F", "#01579B", "#B71C1C", "#006064", "#3E2723",
+var colors = ["#F57F17", "#424242", "#880E4F", "#01579B", "#B71C1C", "#006064", "#4E342E",
               "#BF360C", "#1B5E20", "#000000"];
 
 var rand = Math.floor(Math.random() * 10);
